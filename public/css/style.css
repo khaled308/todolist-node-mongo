@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    background: linear-gradient(120deg,#f6d365,#fda085);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+header{
+    font-size: 1.5rem;
+}
+header,
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+form input,
+form button{
+    padding: .5rem;
+    font-size: 2rem;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+form button{
+    cursor: pointer;
+    color: #d88771;
+    transition: all .3s ease;
+}
+form button:hover{
+    background-color: #d88771;
+    color: #fff;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    list-style: none;
+    min-width: 30%;
+}
+.todo{
+    margin: .5rem;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: all 1s ease;
+}
+.todo li{
+    flex: 1;
+}
+.trash-btn,
+.complete-btn{
+    background-color: #ff6f47;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn{
+    background-color: rgb(73, 204, 73);
+}
+.todo-item{
+    padding: 0 .5rem;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: .5;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+    position: absolute;
+}
+select{
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.select::after{
+    content: "\25bc";
+    position: absolute;
+    background-color: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .6s ease;
+}
+.select:hover::after{
+    background-color: #fff;
+    color: #ff6f47;
+}

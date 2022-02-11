@@ -1,0 +1,15 @@
+<% if(data.length > 0){ %> 
+    <ul class="todo-list">
+        <% for(const item of data){ %> 
+            <div class="<%= `todo ${item.status == 1 ? 'completed' : ''}` %>" >
+                <li class="todo-item"><%= item.task  %> </li>
+                <button class="trash-btn">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <button class="complete-btn">
+                    <i class="fas fa-check"></i>
+                </button>
+            </div>
+        <% } %> 
+    </ul>
+<% } %> 
